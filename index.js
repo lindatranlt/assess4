@@ -13,6 +13,8 @@ app.get("/api/fortune", controller.getFortune);
 
 app.get("/api/motivated", controller.getMotivated);
 
-// app.get("/api/yes", controller.yesClick);
+app.get("/api/date", controller.getDate);
+
+app.get("/api/time", controller.getTimeNow);
 
 app.listen(4000, () => console.log("Server running on 4000"));

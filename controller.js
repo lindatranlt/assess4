@@ -29,9 +29,18 @@ module.exports = {
         res.status(200).send(randomMotivations);
     },
 
-    // getClicked: (req, res) => {
-    // const yesReponse = "Your health thanks you!!"
-    // res.status(200).send(yesReponse);
-    // }
+    getDate: (req, res) => {
+    let today = new Date();
+    let date = (today.getMonth()+1) +'.'+ today.getDate() +'.'+ today.getFullYear();
+
+    res.status(200).send(date);
+    },
+
+    getTimeNow: (req, res) => {
+        let today = new Date();
+        let time = today.getHours() +':'+ today.getMinutes() +':'+ today.getSeconds();
+    
+        res.status(200).send(time);
+    },
 
 }
